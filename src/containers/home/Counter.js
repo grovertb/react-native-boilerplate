@@ -61,9 +61,7 @@ class Counter extends Component {
         <Button onPress={() => addCounter()}>Add</Button>
         <Button onPress={() => removeCounter()}>Remove</Button>
         <Button onPress={() => this.props.history.push('/home/detail')}>Detalle</Button>
-        <Button onPress={this._handleButtonPress}>
-          <Text>Check for updates</Text>
-        </Button>
+        <Button onPress={this._handleButtonPress}>Actualizar aplicación</Button>
       </View>
     )
   }
