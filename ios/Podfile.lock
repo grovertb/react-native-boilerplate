@@ -4,23 +4,52 @@ PODS:
   - AppCenter/Core (1.12.0)
   - AppCenter/Crashes (1.12.0):
     - AppCenter/Core
+  - AppCenter/Push (1.12.0):
+    - AppCenter/Core
   - AppCenterReactNativeShared (1.11.0):
     - AppCenter/Core (= 1.12.0)
+  - Base64 (1.1.2)
+  - CodePush (5.5.2):
+    - Base64 (~> 1.1)
+    - JWT (~> 3.0.0-beta.7)
+    - React
+    - SSZipArchive (~> 2.1)
+  - JWT (3.0.0-beta.11):
+    - Base64 (~> 1.1.2)
+  - React (0.11.0):
+    - React/Core (= 0.11.0)
+  - React/Core (0.11.0)
+  - SSZipArchive (2.1.4)
 
 DEPENDENCIES:
   - AppCenter/Analytics (~> 1.12.0)
   - AppCenter/Crashes (~> 1.12.0)
+  - AppCenter/Push (~> 1.12.0)
   - AppCenterReactNativeShared (~> 1.11.0)
+  - CodePush (from `../node_modules/react-native-code-push`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AppCenter
     - AppCenterReactNativeShared
+    - Base64
+    - JWT
+    - React
+    - SSZipArchive
+
+EXTERNAL SOURCES:
+  CodePush:
+    :path: "../node_modules/react-native-code-push"
 
 SPEC CHECKSUMS:
   AppCenter: 4d27bdafd74b1b3e90946b9989fd6011a7e39c5e
   AppCenterReactNativeShared: 74a1c684b8183b3edef0a7e41d567fe8bd31075d
+  Base64: cecfb41a004124895a7bcee567a89bae5a89d49b
+  CodePush: f6b348759cdc42c734d9c3a46ceb2997c270b12e
+  JWT: 05028b9624591bba9681bb57df2c5f95fa258bad
+  React: ab1a2e21deb34965c38328d5ec40cc7d12c6050a
+  SSZipArchive: 41455d4b8d2b6ab93990820b50dc697c2554a322
 
-PODFILE CHECKSUM: 2a76714e96dda0a85e97079791c1db5871ace202
+PODFILE CHECKSUM: fbf981be823fec56fa1ca6e1f39087be2c1904e5
 
 COCOAPODS: 1.5.3

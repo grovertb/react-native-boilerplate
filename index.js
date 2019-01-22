@@ -11,7 +11,7 @@ import App from './src'
 import { name as appName } from './app.json'
 
 let codePushOptions = {
-  checkFrequency: codePush.CheckFrequency.ON_APP_RESUME
+  checkFrequency: codePush.CheckFrequency.ON_APP_START
 }
 
 AppRegistry.registerComponent(appName, () => codePush(codePushOptions)(App))

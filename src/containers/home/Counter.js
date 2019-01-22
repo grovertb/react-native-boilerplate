@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View } from 'react-native'
+import { View, ToastAndroid } from 'react-native'
 import { connect } from 'react-redux'
 import { Text, Button } from 'react-native-paper'
 import { withRouter } from 'react-router-native'
@@ -14,6 +14,7 @@ class Counter extends Component {
   }
 
   codePushStatusDidChange(status) {
+    console.log('codePushStatusDidChange: ', status);
     this.setState({
       code_status: status
     })
@@ -37,7 +38,7 @@ class Counter extends Component {
   }
 
   codePushDownloadDidProgress(progress) {
-    console.log(progress.receivedBytes + ' of ' + progress.totalBytes + ' received.')
+    console.log('codePushDownloadDidProgress: ', progress.receivedBytes + ' of ' + progress.totalBytes + ' received.')
     this.setState({
       code_progress: progress.receivedBytes + ' of ' + progress.totalBytes + ' received.'
     })
@@ -54,10 +55,13 @@ class Counter extends Component {
 
     return (
       <View>
-        <Text>Home</Text>
+        <Text>HOLAAAAAAAAAA</Text>
         <Text>{counter}</Text>
         <Text>{code_status}</Text>
         <Text>{code_progress}</Text>
+        <Button >Action 1</Button>
+        <Button >Action 2</Button>
+        <Button >Action 3</Button>
         <Button onPress={() => addCounter()}>Add</Button>
         <Button onPress={() => removeCounter()}>Remove</Button>
         <Button onPress={() => this.props.history.push('/home/detail')}>Detalle</Button>
@@ -66,7 +70,7 @@ class Counter extends Component {
     )
   }
 
-  _handleButtonPress() {
+  _handleButtonPress = () => {
     codePush.sync({
       updateDialog: true,
       installMode : codePush.InstallMode.IMMEDIATE

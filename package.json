@@ -1,6 +1,6 @@
 {
   "name": "reactNativeBoilerplate",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
@@ -10,6 +10,7 @@
     "appcenter": "^1.11.0",
     "appcenter-analytics": "^1.11.0",
     "appcenter-crashes": "^1.11.0",
+    "appcenter-push": "^1.11.0",
     "extensible-duck": "1.5.0",
     "immer": "1.10.4",
     "memorize-decorator": "0.2.2",
